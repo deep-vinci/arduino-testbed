@@ -1,10 +1,16 @@
 void setup() {
-  pinMode(12, OUTPUT);  // Set pin 13 as output
+  pinMode(11, OUTPUT);
+  pinMode(10, OUTPUT);
 }
 
 void loop() {
-  digitalWrite(12, HIGH);  // Turn LED on
-  delay(1000);             // Wait 1 second
-  digitalWrite(12, LOW);   // Turn LED off
-  delay(1000);             // Wait 1 second
+  // LED 1 on, LED 2 off
+  digitalWrite(11, HIGH);
+  digitalWrite(10, LOW);
+  delay(250);
+
+  // LED 2 on, LED 1 off
+  digitalWrite(11, LOW);
+  digitalWrite(10, HIGH);
+  delay(250);
 }
