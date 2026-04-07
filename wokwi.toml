@@ -1,0 +1,5 @@
+[wokwi]
+version = 1
+
+firmware = "build/project.ino.hex"
+elf = "build/project.ino.elf"
