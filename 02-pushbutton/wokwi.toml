@@ -1,0 +1,5 @@
+[wokwi]
+version = 1
+
+firmware = "build/02-pushbutton.ino.hex"
+elf = "build/02-pushbutton.ino.elf"

@@ -1,0 +1,59 @@
+{
+    "version": 1,
+    "author": "Deepak",
+    "editor": "wokwi",
+    "parts": [
+        {
+            "type": "wokwi-breadboard-half",
+            "id": "bb1",
+            "top": -223.8,
+            "left": 578.8,
+            "attrs": { "color": "#eeefed" }
+        },
+        {
+            "type": "wokwi-arduino-mega",
+            "id": "mega",
+            "top": -210.6,
+            "left": 92.4,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-pushbutton",
+            "id": "btn1",
+            "top": -144.6,
+            "left": 607.8,
+            "rotate": 90,
+            "attrs": { "color": "green", "xray": "1" }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r1",
+            "top": -82.45,
+            "left": 652.8,
+            "attrs": { "value": "10000" }
+        },
+        {
+            "type": "wokwi-led",
+            "id": "led1",
+            "top": -118.8,
+            "left": 608.6,
+            "attrs": { "color": "red", "flip": "1" }
+        }
+    ],
+    "connections": [
+        ["bb1:bp.1", "mega:5V", "red", ["h-113.6", "v37.5", "h-242.3"]],
+        ["bb1:bn.1", "mega:GND.2", "black", ["h-104", "v37.1", "h-242.15"]],
+        ["bb1:12b.j", "bb1:bn.10", "black", ["v0"]],
+        ["bb1:6t.b", "mega:2", "blue", ["v-105.6", "h-322.4"]],
+        ["btn1:1.l", "bb1:6t.c", "", ["$bb"]],
+        ["btn1:2.l", "bb1:4t.c", "", ["$bb"]],
+        ["btn1:1.r", "bb1:6b.h", "", ["$bb"]],
+        ["btn1:2.r", "bb1:4b.h", "", ["$bb"]],
+        ["r1:1", "bb1:6b.i", "", ["$bb"]],
+        ["r1:2", "bb1:12b.i", "", ["$bb"]],
+        ["bb1:bp.2", "bb1:3b.j", "red", ["v0"]],
+        ["led1:A", "bb1:4b.i", "", ["$bb"]],
+        ["led1:C", "bb1:3b.i", "", ["$bb"]]
+    ],
+    "dependencies": {}
+}
