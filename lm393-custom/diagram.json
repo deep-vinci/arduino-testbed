@@ -1,0 +1,65 @@
+{
+    "version": 1,
+    "author": "Deepak",
+    "editor": "wokwi",
+    "parts": [
+        {
+            "type": "board-esp32-devkit-c-v4",
+            "id": "esp",
+            "top": 0,
+            "left": -4.76,
+            "attrs": {}
+        },
+        {
+            "type": "chip-lm393",
+            "id": "chip1",
+            "top": -85.38,
+            "left": -177.6,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-potentiometer",
+            "id": "pot1",
+            "top": -30.1,
+            "left": -201.8,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-led",
+            "id": "led1",
+            "top": -22.8,
+            "left": -92.2,
+            "attrs": { "color": "red", "flip": "1" }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r1",
+            "top": -44.05,
+            "left": -105.6,
+            "attrs": { "value": "1000" }
+        }
+    ],
+    "connections": [
+        ["esp:TX", "$serialMonitor:RX", "", []],
+        ["esp:RX", "$serialMonitor:TX", "", []],
+        ["esp:5V", "pot1:VCC", "red", ["h-115.05", "v-172.8"]],
+        ["pot1:GND", "esp:GND.1", "black", ["v86.4", "h144", "v28.8"]],
+        ["pot1:SIG", "chip1:IN", "green", ["v19.2", "h124.4", "v-124.8"]],
+        [
+            "chip1:VCC",
+            "esp:5V",
+            "red",
+            ["h-19.2", "v-19.2", "h163.2", "v297.6", "h9.6"]
+        ],
+        [
+            "chip1:GND",
+            "esp:GND.1",
+            "black",
+            ["h-28.8", "v-38.4", "h182.4", "v230.4"]
+        ],
+        ["chip1:OUT", "r1:2", "green", ["h0"]],
+        ["r1:1", "led1:A", "green", ["v0"]],
+        ["led1:C", "esp:GND.1", "green", ["v0"]]
+    ],
+    "dependencies": {}
+}

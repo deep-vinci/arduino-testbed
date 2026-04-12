@@ -1,0 +1,5 @@
+[wokwi]
+version = 1
+
+firmware = "build/lm393-custom.ino.hex"
+elf = "build/lm393-custom.ino.elf"

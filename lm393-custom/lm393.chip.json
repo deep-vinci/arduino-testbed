@@ -1,0 +1,11 @@
+{
+  "name": "lm393",
+  "author": "Deepak",
+  "pins": [
+    "VCC",
+    "GND",
+    "IN",
+    "OUT"
+  ],
+  "controls": []
+}
